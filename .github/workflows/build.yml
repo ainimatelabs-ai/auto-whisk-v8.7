@@ -24,11 +24,11 @@ jobs:
     
     - name: Build EXE
       run: |
-        pyinstaller --onefile --windowed --name="AutoWhisk_v8.6_FIXED" auto_whisk_v8.6_FIXED.py
+        pyinstaller --onefile --windowed --name="AutoWhisk" auto_whisk.py
     
     - name: Upload EXE
       uses: actions/upload-artifact@v4
       with:
-        name: AutoWhisk-v8.6-Windows
-        path: dist/AutoWhisk_v8.6_FIXED.exe
+        name: AutoWhisk-Windows
+        path: dist/AutoWhisk.exe
         retention-days: 30
